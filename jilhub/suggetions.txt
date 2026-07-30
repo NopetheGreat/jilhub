@@ -1,0 +1,5 @@
+x or text clear feature for search bar
+each video need to have unic share link from my website.
+when click video and open , video need to have solid frame , currently video frame small and i like it to be bigger and dont change when video load
+when one video playing it need to have full detaisl as showen in thumbnail , and suggetion videos on below , so it dont look empty 
+if possible make video play bit like big websites do when arrow hover abouve it 
