@@ -1,0 +1,34 @@
+name: Auto-generate HTML
+
+on:
+  push:
+    paths:
+      - 'data.json'
+      - 'category.txt'
+      - 'scraper.py'
+      - 'generate_html.py'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run scraper and generator
+        run: |
+          python scraper.py
+          python generate_html.py
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automatically update index.html via GitHub Actions"
+          file_pattern: 'index.html'
