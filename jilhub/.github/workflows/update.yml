@@ -8,7 +8,7 @@ on:
       - 'scraper.py'
       - 'generate_html.py'
   schedule:
-    - cron: '0 0 * * *'  # Runs automatically every day at 00:00 UTC
+    - cron: '0 0 * * *'  # Runs automatically every day at 00:00 UTC 
 
 jobs:
   build:
